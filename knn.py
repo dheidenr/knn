@@ -24,7 +24,6 @@ train_feature_matrix, test_feature_matrix, train_labels, test_labels = \
 clf = KNeighborsClassifier()
 
 clf.fit(train_feature_matrix, train_labels)
-# Ваш код здесь,
 y_pred = clf.predict(test_feature_matrix)
 print(y_pred)
 
@@ -58,15 +57,11 @@ y_pred = clf.predict(test_feature_matrix)
 print(y_pred)
 print(accuracy_score(test_labels, y_pred))
 
-# Вычисление прогназируемой вероятности класса
+# Вычисление прогназируемой вероятности класса под номером 3
 
 optimal_clf = clf
 pred_prob = clf.predict_proba(test_feature_matrix)
 print(pred_prob)
-
-
-# %matplotlib inline
-# import numpy as np
 
 unique, freq = np.unique(test_labels, return_counts=True)
 freq = list(map(lambda x: x / len(test_labels), freq))

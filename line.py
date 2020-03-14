@@ -44,8 +44,8 @@ search = GridSearchCV(
 
 search.fit(feature_matrix, labels)
 
-# У меня нашло с кучей варнингов {'C': 2, 'penalty': 'l2'} ghb max_
-# Нашло на юпитере тоже в варниногом {'C': 1, 'penalty': 'l1'}
+# У меня с кучей варнингов {'C': 2, 'penalty': 'l2'} ghb max_
+# На юпитере тоже в варниногом {'C': 1, 'penalty': 'l1'}
 
 print(search.best_params_)
 
